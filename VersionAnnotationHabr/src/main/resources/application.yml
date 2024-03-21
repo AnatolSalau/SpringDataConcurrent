@@ -1,1 +1,26 @@
-spring.application.name=VersionAnnotationHabr
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: sA#259979148307
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+server:
+  port: 8080
